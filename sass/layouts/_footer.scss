@@ -1,54 +1,59 @@
-.flex-ftr{
-    @media screen and (min-width: 1200px) {
-        display: flex;
-        align-items: baseline;
-    }
+.flex-ftr {
+  
     @media screen and (max-width: 1200px) {
-       display: grid;
-       grid-template-columns: 1fr 1fr;
-       gap: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
     }
-       @media screen and (min-width: 480px) {
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+    @media screen and (min-width: 480px) {
         display: flex;
         flex-direction: column;
+    }
 }
-}
-.footer{
+
+.footer {
+
     padding: 60px 0;
     background-color: #2F303A;
 
-    & address{
+    & address {
         margin-top: 20px;
     }
-   
+
 }
 
 .ftr-address {
     display: block;
-   
+
 
     @media screen and (max-width: 1200px) {
         margin: 0;
         text-align: center;
-    
- }
+
+    }
 }
+
 .footer-logo {
-    color:var(--secondary-color);
+    color: var(--secondary-color);
     font-family: 'Raleway';
     font-weight: 700px;
     font-size: 26px;
-    line-height:1.2;
+    line-height: 1.2;
 
     & span {
         color: var(--accent-color);
         font-weight: 400;
-        line-height:1.4;
+        line-height: 1.4;
     }
 }
+
 .ftr-item:not(:first-child) {
     margin-top: 9px;
 }
+
 .footer-info {
     & .address {
         color: var(--secondary-color);
@@ -68,43 +73,57 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    & .link:hover ,
+    & .link:hover,
     & .link:focus {
         color: var(--accent-color);
     }
 
-    & .address:hover ,
+    & .address:hover,
     & .address:focus {
-    color: var(--accent-color);
+        color: var(--accent-color);
+    }
 }
-}
+
 .conect {
     display: block;
     margin-right: 93px;
 
+
     @media screen and (max-width: 1200px) {
         margin: 0;
         text-align: center;
- }
+
+
+    }
+
     @media screen and (min-width: 480px) {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+    }
 }
-}
+
 .ftr-title {
     margin-top: 0;
     margin-bottom: 20px;
-  
+
     font-size: 14px;
     line-height: 1.1;
     text-transform: uppercase;
     color: var(--secondary-color);
 }
-.ftr-list{
+
+.ftr-list {
     display: flex;
+
+    
+ justify-content: center;
+
+
 }
-.ftr-icon{
+
+.ftr-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,68 +135,112 @@
     margin-right: 13px;
     transition: background-color var(--anim-speed) ease-in-out;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     &:hover,
     &:focus {
-    background-color: var(--accent-color);
-    }
-}
+        background-color: var(--accent-color);
 
-.button-nav button:hover,
-.button-nav button:focus {
-    background-color: var(--accent-color);
-    color:var(--secondary-color);
-}
-.ftr-group {
-    
-    & input ::placeholder {
-        padding: 16px 15px 295px 15px
+    }}
+
+    .button-nav button:hover,
+    .button-nav button:focus {
+        background-color: var(--accent-color);
+        color: var(--secondary-color);
     }
 
-    & input {
-        width: 358px;
-        height: 50px;
-        padding-left: 15px;
-        padding-right: 15px;
-        background-color: transparent;
-        color:rgba(255, 255, 255, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-        border-radius: 4px;
-        outline: none;
-        margin-right: 12px;
+    .ftr-form {
+        @media screen and (min-width: 786px) {
+            grid-column: span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        @media screen and (max-width: 480px) {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
-    @media screen and (min-width: 1200px) {
+    .ftr-group {
+
+        & input ::placeholder {
+            padding: 16px 15px 295px 15px
+        }
+
+        & input {
+            width: 358px;
+            height: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: transparent;
+            color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+            outline: none;
+            margin-right: 12px;
+    }
+    @media screen and (max-width: 786px) {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
 
-        @media screen and (max-width: 1200px) {
-            margin: 0;
-            text-align: center;
-        
-     }
-}
-}
+    }
+    @media screen and (min-width: 786px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+     
 
+    }
+
+    }
+
+    .base {
+        @media screen and (min-width: 786px){
+            display: flex;
+            flex-direction: row;
+            gap: 190px;
+            align-items: baseline;
+            
+        }
+        @media screen and (max-width: 786px){
+            .conect {
+                margin-top: 60px;
+            }
+        }
+       
+    }
 .btn-form-ftr {
-    position: relative; 
+    position: relative;
     display: flex;
     justify-content: center;
 
-    
 }
+
 .ftr-form-icon {
     position: absolute;
     top: 14px;
     right: 20px;
 }
-.ftr-group button{
-   width: 200px;
-   height: 50px;
-   padding-right: 28px;
-   background-color: var(--accent-color);
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   color:var(--secondary-color);
-   font-family: 'Roboto';
-   line-height: 1.9;
+
+.ftr-group button {
+    width: 200px;
+    height: 50px;
+    padding-right: 28px;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: var(--secondary-color);
+    font-family: 'Roboto';
+    line-height: 1.9;
 }

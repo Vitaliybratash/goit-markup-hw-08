@@ -42,6 +42,7 @@
         top: 21px;
         background: #ffff;
         transition: color .25s cubic-bezier(0.4, 0, 0.2, 1);
+        border-style: none;
 
         &:hover {
             color: var(--accent-color);
@@ -51,6 +52,7 @@
 
     &__btn--icon {
         display: block;
+        
     }
 
     &__nav {

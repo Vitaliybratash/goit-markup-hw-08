@@ -11,6 +11,17 @@
         justify-content: center;
       
         line-height:1.6;
+        @media(max-width: 767px) {
+                    justify-content: start;
+                    flex-wrap: wrap;
+                    gap: 8px;
+        
+                    & .item {
+                        &:not(:last-child) {
+                            margin-right: 0;
+                        }
+                    }
+                }
     }
 
     & .title {
@@ -72,7 +83,13 @@
         width: calc((100% - 60px) / 3);
         background:var(--secondary-color);
         border: 1px solid #EEEEEE;
+
     }
+    @media(max-width: 480px) {
+       & .project {
+       flex-basis: calc((100% - 0px) / 1);
+    
+}}
 }
 .project {
     margin-right: 30px;

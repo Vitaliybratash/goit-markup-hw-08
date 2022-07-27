@@ -1,26 +1,29 @@
 .section-client {
     padding: 94px 0;
 }
-.company-list{
+
+.company-list {
     display: flex;
-    gap:30px;
+    gap: 30px;
 
     &__link {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         width: 170px;
         height: 92px;
         border: 1px solid #AFB1B8;
         border-radius: 4px;
-        fill:  #AFB1B8;;
+        fill: #AFB1B8;
+        ;
         transition: fill var(--anim-speed) ease-in-out, border var(--anim-speed) ease-in-out;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     }
+
     &__link:hover,
-    &__link:focus{
+    &__link:focus {
         border: 1px solid var(--accent-color);
         fill: var(--accent-color);
     }
@@ -29,20 +32,19 @@
     @media screen and (max-width: 1200px) {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+
         &__link {
             width: 100%;
         }
 
-        
-     
+
+
     }
-    
+
     @media screen and (max-width: 480px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-       
-    }
 
     }
-    
-    
+
+}
