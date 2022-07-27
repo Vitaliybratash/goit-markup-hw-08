@@ -1,0 +1,42 @@
+.section-work {
+    padding: 94px 0;
+
+    @media screen and (min-width: 320px) {
+        display: none;
+      }
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+      @media screen and (min-width: 1200px) {
+        display: flex;
+      }
+}
+.work {
+    display: flex;
+    gap:30px;
+
+    &__app {
+        position: relative;
+        width: 370px;
+        display: flex;
+        text-align: center;
+    }
+
+    &__product{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 370px;
+        bottom: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        font-size: 14px;
+        line-height: 1,1;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+        background: rgba(47, 48, 58, 0.8);
+            
+        }
+    }
+

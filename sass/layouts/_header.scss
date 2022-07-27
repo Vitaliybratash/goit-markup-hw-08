@@ -1,0 +1,127 @@
+.header {
+    padding: 24px;
+    border-bottom: 1px solid #ECECEC;
+}
+.logo {
+    color: var(--title-text-color);
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height:1.2;
+
+    & span {
+        color: var(--accent-color);
+        font-weight: 400;
+        line-height:1.4;
+    }
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    & .site-nav {
+        @media (max-width: 768px){
+            display: none;
+        }
+    }
+
+}
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+
+    & .item:not(:last-child){
+        margin-right: 50px;
+        position: relative;
+    }
+
+
+    & .accent-link{
+        display: block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    & .accent-link::after{
+        content: '';
+    
+        position: absolute;
+        bottom: -27px;
+    
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-color);
+    }
+
+    & .link {
+        display: block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: var(--title-text-color);
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+    }
+
+    &.link:hover ,
+    &.link:focus {
+    color: var(--accent-color);
+}}
+.accent-link {
+    color: var(--accent-color);
+}
+.info-nav {
+    display: flex;
+    margin-left: auto;
+
+    & .item {
+        display: flex;
+        align-items: center;
+    }
+
+    & .item {
+        color: var(--additional-text-color);
+        font-weight: 500;
+        line-height :1.1;
+        letter-spacing: 0.02em;
+        transition-property: color;
+        transition-duration: var(--anim-speed);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+         @media (max-width: 768px){
+            display: none;
+        }
+
+    & .item:hover{
+        color:var(--accent-color);
+    }
+
+
+    & .item a {
+    color: inherit;
+    }
+
+    & .item + .item{
+        margin-left: 50px;
+    }
+
+    
+    & .link{
+        margin-right: 10px; 
+    }
+
+}
+    .letter-icon {
+    width: 16px;
+    height: 12px;
+    fill:currentColor;
+    margin-right: 10px;
+}
+.phone-icon {
+    width: 10px;
+    height: 16px;
+    fill:currentColor;
+}
